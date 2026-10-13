@@ -10,7 +10,7 @@ No build step or dependency installation is required. Edit `dist/index.html`, `d
 
 ## Collaboration
 
-Create a branch, commit your changes and open a pull request. Luciano has write access. GitHub changes do not automatically publish to the live website; Anthony deploys approved changes through the existing Sites project.
+Create a branch, commit your changes and open a pull request. Luciano has write access. Changes on `main` are checked by Anthony's Codex automation every five minutes and published to the existing Sites project. Merge website changes into `main` to publish; feature branches alone do not publish. This is a local Codex automation, so updates can be delayed while Codex is unavailable. Failed validation/deployment is reported to Anthony; the last successful deployment remains live. Documentation-only changes do not require a deployment.
 
 The inquiry form opens an email draft in the visitor's mail app; it does not store submissions.
 
