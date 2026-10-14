@@ -1,0 +1,88 @@
+/* ===========================================================
+   CALLOWAY & REED — accounting & advisory
+   Merriweather display / Source Sans 3 UI. Navy, white, brass.
+   Conservative grid, rules, small caps labels, restrained motion.
+   =========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+:root{
+  --font-display:'Merriweather',Georgia,serif;
+  --font-body:'Source Sans 3',system-ui,sans-serif;
+  --font-ui:'Source Sans 3',sans-serif;
+  --font-quote:'Merriweather',Georgia,serif;
+
+  --bg:#f6f7f9; --fg:#101a2c; --muted:#545f73; --line:#d8dde5;
+  --surface:#fff; --tint:#e9edf3; --accent:#1e3a63; --on-accent:#fff;
+  --brass:#b08d44;
+  --ink-bg:#0e1a2d; --ink-fg:#eef2f8; --ink-muted:#a9b6c9;
+  --head-bg:rgba(246,247,249,.92);
+  --bar-bg:#0e1a2d; --bar-fg:#eef2f8; --bar-line:rgba(238,242,248,.16);
+  --hero-scrim:linear-gradient(84deg,rgba(9,17,30,.9) 4%,rgba(9,17,30,.34) 64%),
+               linear-gradient(0deg,rgba(9,17,30,.76),transparent 52%);
+  --hero-kicker:#c9a24a;
+  --shadow-sm:0 14px 38px rgba(16,26,44,.13);
+
+  --h1:clamp(40px,5vw,74px); --h1-weight:300; --h1-lh:1.1; --h1-tracking:-.02em;
+  --hero-p:18px; --hero-max:760px; --hero-h:82vh;
+  --logo-size:20px; --logo-weight:700; --logo-tracking:-.01em;
+  --menu-size:14px; --menu-weight:600; --menu-gap:28px;
+  --btn-radius:3px; --btn-size:13.5px; --btn-weight:600; --btn-pad:15px 26px; --btn-tracking:.01em;
+  --card-radius:3px; --img-radius:3px; --card-pad:32px; --card-h:20px;
+  --kicker-tracking:.22em; --section-pad:92px; --lede-size:17.5px;
+  --quote-size:clamp(21px,2.3vw,30px);
+  --faq-size:17px;
+  --dock-bg:rgba(255,255,255,.93); --dock-bg-solid:#fff; --dock-line:#d8dde5;
+  --dock-seg:#e9edf3; --dock-active:#fff; --dock-fg:#101a2c; --dock-muted:#545f73;
+}
+html[data-theme="dark"]{
+  --bg:#0b1119; --fg:#e9eef6; --muted:#9aa8bd; --line:#1d2735;
+  --surface:#121a25; --tint:#121a25; --accent:#6f9ad4; --on-accent:#0b1119;
+  --ink-bg:#070d14; --ink-fg:#e9eef6; --ink-muted:#a9b6c9;
+  --head-bg:rgba(11,17,25,.9); --bar-bg:#070d14; --bar-line:rgba(233,238,246,.14);
+  --dock-bg:rgba(18,26,37,.93); --dock-bg-solid:#121a25; --dock-line:#1d2735;
+  --dock-seg:#18212d; --dock-active:#232e3d; --dock-fg:#e9eef6; --dock-muted:#9aa8bd;
+  color-scheme:dark;
+}
+h2{font-size:clamp(28px,3.4vw,46px);line-height:1.16;font-weight:300;letter-spacing:-.02em}
+h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
+h4{font-family:var(--font-ui);font-weight:700}
+.gold{color:#b08d44}
+.label{font-family:var(--font-ui);font-size:11px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:#b08d44}
+.card{border-left:3px solid var(--accent)}
+.card:hover{transform:none;box-shadow:var(--shadow-sm);border-left-color:#b08d44}
+.practice{border-top:1px solid var(--line);padding:30px 0;display:grid;
+  grid-template-columns:58px 1fr 160px;gap:28px;align-items:start}
+.practice .idx{font-family:var(--font-display);font-size:15px;color:#b08d44;font-weight:700}
+.practice h3{margin-bottom:8px}
+.practice p{font-size:14.5px;margin:0}
+.practice ul{list-style:none;margin:0;padding:0;font-size:13px;color:var(--muted)}
+.practice li{padding:5px 0;border-bottom:1px dotted var(--line)}
+.practice li:last-child{border:0}
+@media(max-width:860px){.practice{grid-template-columns:1fr;gap:10px}}
+.person{border:1px solid var(--line);background:var(--surface);border-radius:3px;overflow:hidden}
+.person .shot{height:270px;border-radius:0}
+.person .body{padding:24px}
+.person h3{margin-bottom:2px}
+.person .role{font-family:var(--font-ui);font-size:12px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:#b08d44;margin-bottom:12px}
+.person p{font-size:13.5px;margin:0}
+.casestudy{border:1px solid var(--line);background:var(--surface);padding:32px;border-radius:3px}
+.casestudy .metric{font-family:var(--font-display);font-size:40px;font-weight:300;
+  color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:10px}
+.casestudy h3{font-size:17px;margin-bottom:8px}
+.casestudy p{font-size:14px;margin:0}
+
+
+/* Distinctive professional direction: boardroom report */
+.concept-tabs--professional{background:#fff;border-block:1px solid #d8dde5;box-shadow:0 8px 22px rgba(16,26,44,.06)}
+.concept-tabs--professional .wrap{gap:0;padding-block:0}
+.concept-tabs--professional a{min-height:50px;border-right:1px solid #d8dde5;border-radius:0;color:#545f73;font-size:12px;padding-inline:22px}
+.concept-tabs--professional a:first-child{background:#1e3a63;color:#fff;border-top:3px solid #b08d44}
+.concept-tabs--professional a:hover{background:#e9edf3;color:#101a2c}
+.hero{align-items:center;--hero-pos:67% 50%}
+.hero-inner{margin-left:5%;max-width:760px;background:rgba(9,17,30,.78);padding:58px;border-top:4px solid #b08d44}
+.section>.wrap>.sec-head{display:grid;grid-template-columns:1.2fr .8fr;align-items:end;border-bottom:1px solid var(--line);padding-bottom:30px}
+.practice{grid-template-columns:58px 1.3fr .7fr}
+.casestudy{border-top:4px solid #b08d44;border-left:1px solid var(--line)}
+@media(max-width:860px){.hero{--hero-mobile-pos:56% 50%}.hero-inner{margin-inline:auto;padding:30px}.section>.wrap>.sec-head{display:block}.practice{grid-template-columns:1fr}}

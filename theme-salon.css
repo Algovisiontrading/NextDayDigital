@@ -1,0 +1,83 @@
+/* ===========================================================
+   LINDEN & CO — salon & spa
+   Cinzel display / Cormorant Garamond body. Blush, ivory, champagne.
+   Very wide letterspacing, hairline rules, luxurious whitespace.
+   =========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+:root{
+  --font-display:'Cinzel',Georgia,serif;
+  --font-body:'Jost',system-ui,sans-serif;
+  --font-ui:'Jost',sans-serif;
+  --font-quote:'Cormorant Garamond',Georgia,serif;
+  --font-soft:'Cormorant Garamond',Georgia,serif;
+
+  --bg:#fcf8f6; --fg:#33242a; --muted:#7c6a70; --line:#ebdcd9;
+  --surface:#fffdfc; --tint:#f5e9e5; --accent:#a9707f; --on-accent:#fffdfc;
+  --ink-bg:#3a2730; --ink-fg:#fbf2f0; --ink-muted:#dcc3c7;
+  --head-bg:rgba(252,248,246,.88);
+  --bar-bg:#f5e9e5; --bar-fg:#33242a; --bar-line:#ebdcd9;
+  --hero-scrim:linear-gradient(82deg,rgba(45,28,34,.76) 4%,rgba(45,28,34,.14) 62%),
+               linear-gradient(0deg,rgba(45,28,34,.6),transparent 52%);
+  --hero-kicker:#f0cdd2;
+  --shadow-sm:0 20px 50px rgba(74,48,56,.12);
+
+  --h1:clamp(40px,5vw,76px); --h1-weight:400; --h1-lh:1.14; --h1-tracking:.03em;
+  --hero-p:18px; --hero-max:720px; --hero-h:88vh;
+  --logo-size:19px; --logo-weight:500; --logo-tracking:.26em;
+  --menu-size:11.5px; --menu-case:uppercase; --menu-tracking:.22em; --menu-weight:400; --menu-gap:34px;
+  --btn-radius:0; --btn-case:uppercase; --btn-tracking:.26em; --btn-size:10.5px;
+  --btn-weight:500; --btn-pad:18px 34px;
+  --card-radius:0; --img-radius:0; --card-pad:38px 34px; --card-h:19px;
+  --kicker-tracking:.4em; --kicker-size:10px; --kicker-mark-w:34px; --kicker-gap:24px;
+  --section-pad:116px; --lede-size:17px;
+  --row-pad:24px 0; --row-h:17px; --row-price:17px;
+  --quote-size:clamp(25px,3vw,38px); --quote-style:italic;
+  --faq-size:15px;
+  --dock-bg:rgba(255,253,252,.92); --dock-bg-solid:#fffdfc; --dock-line:#ebdcd9;
+  --dock-seg:#f5e9e5; --dock-active:#fffdfc; --dock-fg:#33242a; --dock-muted:#7c6a70;
+}
+html[data-theme="dark"]{
+  --bg:#1a1316; --fg:#f6ebee; --muted:#bda7ae; --line:#2e2227;
+  --surface:#231a1e; --tint:#231a1e; --accent:#d29aa7; --on-accent:#1a1316;
+  --ink-bg:#120d0f; --ink-fg:#f6ebee; --ink-muted:#cfb6bd;
+  --head-bg:rgba(26,19,22,.9); --bar-bg:#231a1e; --bar-fg:#f6ebee; --bar-line:#2e2227;
+  --dock-bg:rgba(35,26,30,.93); --dock-bg-solid:#231a1e; --dock-line:#2e2227;
+  --dock-seg:#2a1f24; --dock-active:#372830; --dock-fg:#f6ebee; --dock-muted:#bda7ae;
+  color-scheme:dark;
+}
+h1,h2,h3,h4{font-weight:400;letter-spacing:.06em}
+h2{font-size:clamp(28px,3.1vw,44px);line-height:1.22;text-transform:uppercase;letter-spacing:.1em}
+h3{font-size:16px;text-transform:uppercase;letter-spacing:.17em}
+.logo span{letter-spacing:.46em;font-size:8px}
+.serif{font-family:var(--font-soft);font-size:clamp(28px,3.4vw,46px);font-style:italic;
+  font-weight:300;letter-spacing:-.01em;line-height:1.2;text-transform:none;color:var(--fg)}
+.card{border:0;border-top:1px solid var(--line);padding-inline:0}
+.card:hover{transform:none;box-shadow:none;border-top-color:var(--accent)}
+.row h4{font-family:var(--font-display);font-size:15px;text-transform:uppercase;letter-spacing:.17em;
+  font-weight:400}
+.row .price{font-family:var(--font-soft);font-size:22px;font-style:italic}
+.stylist{text-align:center}
+.stylist .shot{height:340px;margin-bottom:22px}
+.stylist h3{font-size:15px;letter-spacing:.2em;margin-bottom:5px}
+.stylist span{font-family:var(--font-soft);font-style:italic;font-size:16px;color:var(--accent)}
+.ritual{border:1px solid var(--line);padding:42px 36px;text-align:center}
+.ritual .n{font-family:var(--font-soft);font-size:42px;font-style:italic;color:var(--accent);
+  line-height:1;display:block;margin-bottom:16px}
+
+
+/* Distinctive salon direction: quiet luxury editorial */
+.concept-tabs--salon{background:var(--bg);border-bottom:1px solid var(--line)}
+.concept-tabs--salon .wrap{justify-content:center;gap:30px;padding-block:17px}
+.concept-tabs--salon a{padding:4px 0;min-height:0;background:transparent!important;color:var(--muted)!important;
+  font-family:var(--font-display);font-size:10px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid transparent}
+.concept-tabs--salon a:first-child{color:var(--accent)!important;border-color:var(--accent)}
+.concept-tabs--salon a:hover{color:var(--fg)!important;border-color:var(--fg)}
+.hero{align-items:center;--hero-pos:65% 50%}
+.hero-inner{text-align:center;margin-inline:auto;max-width:760px}
+.hero-inner .kicker{justify-content:center}
+.hero-cta{justify-content:center}
+.section{padding-block:calc(var(--section-pad) * 1.08)}
+.section.tint{background:linear-gradient(135deg,var(--tint),var(--bg))}
+.stylist .shot{aspect-ratio:3/4;height:auto}
+@media(max-width:860px){.concept-tabs--salon .wrap{justify-content:flex-start;gap:22px}.hero{--hero-mobile-pos:55% 50%}.hero-inner{text-align:left}.hero-inner .kicker,.hero-cta{justify-content:flex-start}}
