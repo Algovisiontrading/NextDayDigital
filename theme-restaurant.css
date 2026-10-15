@@ -1,0 +1,79 @@
+/* ===========================================================
+   HARBOR & VINE — fine dining
+   Cormorant Garamond display / Jost UI. Charcoal + antique gold.
+   Editorial, generous leading, hairline rules, no rounded corners.
+   =========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+:root{
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Jost',system-ui,sans-serif;
+  --font-ui:'Jost',sans-serif;
+  --font-quote:'Cormorant Garamond',Georgia,serif;
+
+  --bg:#faf7f1; --fg:#1b1713; --muted:#6d6459; --line:#e0d8cb;
+  --surface:#fffdf8; --tint:#f3ece0; --accent:#9d7b34; --on-accent:#fffdf8;
+  --ink-bg:#17130f; --ink-fg:#f6f1e7; --ink-muted:#c3b6a0;
+  --head-bg:rgba(250,247,241,.84);
+  --bar-bg:#17130f; --bar-fg:#f6f1e7; --bar-line:rgba(246,241,231,.18);
+  --hero-scrim:linear-gradient(90deg,rgba(14,11,8,.9) 8%,rgba(14,11,8,.42) 62%,rgba(14,11,8,.62)),
+               linear-gradient(0deg,rgba(14,11,8,.82),transparent 58%);
+  --hero-kicker:#d9b86a;
+  --shadow-sm:0 18px 50px rgba(25,18,10,.14);
+
+  --h1:clamp(50px,7vw,104px); --h1-weight:300; --h1-lh:.98; --h1-tracking:-.025em;
+  --hero-p:19px; --hero-max:820px; --hero-h:90vh;
+  --logo-weight:400; --logo-size:25px; --logo-tracking:.08em;
+  --menu-size:12px; --menu-tracking:.17em; --menu-case:uppercase; --menu-weight:400; --menu-gap:30px;
+  --btn-radius:0; --btn-case:uppercase; --btn-tracking:.19em; --btn-size:11px;
+  --btn-weight:500; --btn-pad:17px 30px;
+  --card-radius:0; --img-radius:0; --card-pad:36px 34px; --card-h:25px;
+  --kicker-tracking:.3em; --kicker-size:10.5px; --kicker-mark-w:30px;
+  --section-pad:104px; --lede-size:17.5px;
+  --row-pad:22px 0; --row-h:23px; --row-price:21px;
+  --quote-size:clamp(26px,3.1vw,40px); --quote-style:italic;
+  --faq-size:19px; --bar-b:19px; --bar-b-weight:400;
+  --dock-bg:rgba(255,253,248,.9); --dock-bg-solid:#fffdf8; --dock-line:#e0d8cb;
+  --dock-seg:#f3ece0; --dock-active:#fffdf8; --dock-fg:#1b1713; --dock-muted:#6d6459;
+}
+html[data-theme="dark"]{
+  --bg:#13100d; --fg:#f4efe5; --muted:#a3998a; --line:#2c2620;
+  --surface:#1b1713; --tint:#1b1713; --accent:#cfa75f; --on-accent:#17130f;
+  --ink-bg:#0c0a08; --ink-fg:#f4efe5; --ink-muted:#b5a992;
+  --head-bg:rgba(19,16,13,.86);
+  --bar-bg:#0c0a08; --bar-line:rgba(244,239,229,.14);
+  --dock-bg:rgba(27,23,19,.92); --dock-bg-solid:#1b1713; --dock-line:#2c2620;
+  --dock-seg:#241f1a; --dock-active:#342c24; --dock-fg:#f4efe5; --dock-muted:#a3998a;
+  color-scheme:dark;
+}
+h1,h2,h3{font-weight:300;letter-spacing:-.02em}
+h2{font-size:clamp(36px,4.4vw,62px);line-height:1.04}
+h3{font-weight:400}
+.logo span{letter-spacing:.42em;font-size:8.5px}
+.card{border-width:0;border-top:1px solid var(--line);padding-inline:0}
+.card:hover{transform:translateY(-4px);box-shadow:none;border-top-color:var(--accent)}
+.dish{display:grid;gap:16px}
+.dish .shot{height:260px}
+.dish h3{font-size:26px;margin-bottom:4px}
+.dish .price{font-family:var(--font-display);font-size:20px;color:var(--accent)}
+.dish p{font-size:14px}
+.rule-top{border-top:1px solid var(--line);padding-top:40px}
+.vintage{font-family:var(--font-display);font-size:13px;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--accent)}
+.menu-col h3{padding-bottom:14px;margin-bottom:10px;border-bottom:1px solid var(--line);
+  font-size:13px;letter-spacing:.3em;text-transform:uppercase;font-family:var(--font-ui);
+  font-weight:600;color:var(--accent)}
+
+
+/* Distinctive restaurant direction: editorial reservation ledger */
+.concept-tabs--restaurant{background:#17130f;color:#f6f1e7;border-color:rgba(255,255,255,.15)}
+.concept-tabs--restaurant .wrap{justify-content:center;gap:0;padding-block:0}
+.concept-tabs--restaurant a{min-height:52px;border-right:1px solid rgba(255,255,255,.14);padding-inline:24px;
+  font-family:var(--font-ui);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#d8cdbb}
+.concept-tabs--restaurant a:first-child{background:transparent;color:#d9b86a;border-bottom:2px solid #d9b86a}
+.concept-tabs--restaurant a:hover{background:#241e18;color:#fff}
+.hero{align-items:center;--hero-pos:62% 50%;}
+.hero-inner{margin-left:5%;border-left:1px solid rgba(217,184,106,.55);padding-left:42px;max-width:850px}
+.section:nth-of-type(even) .sec-head{border-top:1px solid var(--line);padding-top:34px}
+.dish .shot{aspect-ratio:4/3;height:auto}
+@media(max-width:860px){.concept-tabs--restaurant .wrap{justify-content:flex-start}.hero-inner{margin-left:auto;padding-left:24px}.hero{--hero-mobile-pos:58% 50%}}

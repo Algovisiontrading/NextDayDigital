@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html data-default="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="noindex,follow" name="robots"/>
+<title>Live searchable wine list | Harbor &amp; Vine</title>
+<meta content="Fine-dining website concept: seasonal menu, wine programme, private dining and a reservation path built for phones." name="description"/>
+<meta content="#faf7f1" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Harbor &amp; Vine — fine dining website concept by NextDay Digital" property="og:title"/>
+<meta content="Fine-dining website concept: seasonal menu, wine programme, private dining and a reservation path built for phones." property="og:description"/>
+<meta content="restaurant.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23faf7f1'/%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="image" fetchpriority="high" href="restaurant.jpg" rel="preload"/>
+<link href="base.css" rel="stylesheet"/>
+<link href="theme-restaurant.css" rel="stylesheet"/>
+<script>
+(function(){var h=document.documentElement,u=new URLSearchParams(location.search).get('mode'),s=null;
+try{s=localStorage.getItem('ndd-mode')}catch(e){}
+h.setAttribute('data-theme',(u==='dark'||u==='light')?u:(s||h.getAttribute('data-default')||'light'))})();
+</script>
+</head>
+<body>
+<a class="skip" href="restaurant-contact.html">Skip to content</a>
+<div aria-hidden="true" class="bartop" id="prog"></div>
+<header class="site-head" id="head">
+<div class="wrap">
+<nav aria-label="Harbor &amp; Vine navigation">
+<a class="logo" href="restaurant.html">Harbor &amp; Vine<span>RESTAURANT</span></a>
+<div class="menu"><a href="restaurant.html">Home</a><a href="restaurant-menu.html">Menu</a><a aria-current="page" href="restaurant-wine.html">Wine List</a><a href="restaurant-private-dining.html">Private Dining</a><a href="restaurant-about.html">Our Story</a><a href="restaurant-contact.html">Contact</a><a class="btn btn-sm" href="restaurant-reservations.html">Reserve</a></div>
+<button aria-controls="drawer" aria-expanded="false" aria-label="Menu" class="burger" id="burger"><i></i><i></i><i></i></button>
+</nav>
+<div class="drawer" id="drawer"><a href="restaurant.html">Home</a><a href="restaurant-menu.html">Menu</a><a aria-current="page" href="restaurant-wine.html">Wine List</a><a href="restaurant-private-dining.html">Private Dining</a><a href="restaurant-about.html">Our Story</a><a href="restaurant-contact.html">Contact</a><a href="restaurant-reservations.html">Reserve a table</a></div>
+</div>
+</header>
+<nav aria-label="Explore restaurant concept sections" class="concept-tabs concept-tabs--restaurant">
+<div class="wrap"><a href="restaurant.html">Home</a><a href="restaurant-menu.html">Menu</a><a aria-current="page" href="restaurant-wine.html">Wine List</a><a href="restaurant-private-dining.html">Private Dining</a><a href="restaurant-about.html">Our Story</a><a href="restaurant-contact.html">Contact</a></div>
+</nav>
+<main id="main"><section class="subhero section ink"><div class="wrap"><span class="kicker">Live cellar inventory</span><h1>The Wine List</h1><p class="lede">Search the current cellar by producer or name, then filter by wine type, country and availability. Inventory can be maintained from one published Google Sheet.</p></div></section>
+<section class="section"><div class="wrap"><div class="wine-toolbar reveal"><label class="wine-search">Search<input autocomplete="off" id="wine-search" placeholder="Wine, producer, grape or region…" type="search"/></label><label>Type<select id="wine-type"><option value="">All types</option></select></label><label>Country<select id="wine-country"><option value="">All countries</option></select></label><label>Availability<select id="wine-stock"><option value="in-stock">In stock</option><option value="">All wines</option><option value="by-glass">By the glass</option></select></label><button class="btn btn-ghost" id="wine-reset" type="button">Reset</button></div><div class="wine-summary"><p aria-live="polite" id="wine-status" role="status">Loading the cellar…</p><p class="muted-sm" id="wine-updated"></p></div><div aria-busy="true" class="wine-grid" id="wine-list"></div><div class="wine-empty" hidden="" id="wine-empty"><h2>No matching bottles</h2><p>Try another producer, country, type or search term.</p></div></div></section>
+<section class="section tint"><div class="wrap"><div class="split"><div class="reveal"><span class="kicker">Simple for staff</span><h2>Update the sheet.<br/>The website follows.</h2><p class="lede">Change the stock count, vintage, price or tasting notes in Google Sheets. The published CSV becomes the restaurant’s public cellar inventory.</p></div><div class="sheet-spec reveal"><h3>Recommended columns</h3><code>Name, Producer, Vintage, Type, Country, Region, Grape, Bottle Price, Glass Price, Stock, Featured, Notes</code><p class="muted-sm">Use a dedicated public tab. Do not publish supplier costs or internal notes.</p></div></div></div></section></main>
+<div class="wrap">
+<footer class="site-foot">
+<span>Harbor &amp; Vine · fictional design concept</span>
+<span><a href="restaurant.html">← Calloway &amp; Reed</a>  ·  <a href="restaurant.html">All 8 themes</a>  ·  <a href="restaurant.html">Field &amp; Form →</a></span>
+<span>Built by <a href="restaurant.html"><u>NextDay Digital</u></a></span>
+</footer>
+<p class="disclosure">Harbor &amp; Vine is an original website concept created by NextDay Digital to demonstrate layout, typography and conversion flow for this industry. The business, staff, hours, address, telephone number, prices and reviews shown are invented placeholders. Not a real business, client project or endorsement. Your site would use your own branding, photography and approved content.</p>
+</div>
+<div aria-label="Preview options" class="dock" role="group">
+<span class="dock-label">Preview</span>
+<div class="dock-seg">
+<button aria-pressed="false" data-mode="light" title="Light mode (L)" type="button">☼<span> Light</span></button>
+<button aria-pressed="false" data-mode="dark" title="Dark mode (D)" type="button">☾<span> Dark</span></button>
+</div>
+<a class="dock-exit" href="restaurant.html">← Themes</a>
+</div>
+<script src="app.js"></script>
+<script src="wine-config.js"></script><script src="wine-list.js"></script></body>
+</html>

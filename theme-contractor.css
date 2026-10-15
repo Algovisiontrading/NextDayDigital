@@ -1,0 +1,87 @@
+/* ===========================================================
+   GRANITE RIDGE — roofing & exteriors
+   Montserrat display / Inter UI. Slate navy + safety orange.
+   Heavy blocks, badge strip, square corners, trust-first.
+   =========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --font-display:'Montserrat',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-ui:'Inter',sans-serif;
+  --font-quote:'Inter',sans-serif;
+
+  --bg:#f3f5f7; --fg:#131b24; --muted:#56626f; --line:#d4dae1;
+  --surface:#fff; --tint:#e6ebf0; --accent:#e8701a; --on-accent:#fff;
+  --ink-bg:#14202c; --ink-fg:#eef3f8; --ink-muted:#aebccb;
+  --head-bg:rgba(243,245,247,.9);
+  --bar-bg:#14202c; --bar-fg:#eef3f8; --bar-line:rgba(238,243,248,.16);
+  --hero-scrim:linear-gradient(88deg,rgba(10,18,26,.92) 2%,rgba(10,18,26,.38) 62%),
+               linear-gradient(0deg,rgba(10,18,26,.86),transparent 50%);
+  --hero-kicker:#ffa75c;
+  --shadow-sm:0 16px 40px rgba(19,27,36,.16);
+
+  --h1:clamp(46px,6.6vw,96px); --h1-weight:900; --h1-lh:.96; --h1-tracking:-.035em; --h1-case:uppercase;
+  --hero-p:18px; --hero-max:840px; --hero-h:88vh;
+  --logo-size:21px; --logo-weight:900; --logo-tracking:-.03em;
+  --menu-size:14px; --menu-weight:600; --menu-gap:26px;
+  --btn-radius:4px; --btn-case:uppercase; --btn-tracking:.1em; --btn-size:13px;
+  --btn-weight:700; --btn-pad:17px 28px;
+  --card-radius:4px; --img-radius:4px; --card-pad:30px; --card-h:20px;
+  --kicker-tracking:.2em; --section-pad:94px;
+  --bar-b:17px; --bar-b-weight:800;
+  --quote-size:clamp(22px,2.5vw,32px);
+  --dock-bg:rgba(255,255,255,.93); --dock-bg-solid:#fff; --dock-line:#d4dae1;
+  --dock-seg:#e6ebf0; --dock-active:#fff; --dock-fg:#131b24; --dock-muted:#56626f;
+}
+html[data-theme="dark"]{
+  --bg:#0e141a; --fg:#eaf0f6; --muted:#9dabba; --line:#212c37;
+  --surface:#151e27; --tint:#151e27; --accent:#ff8534; --on-accent:#0e141a;
+  --ink-bg:#090f14; --ink-fg:#eaf0f6; --ink-muted:#aebccb;
+  --head-bg:rgba(14,20,26,.9); --bar-bg:#090f14; --bar-line:rgba(234,240,246,.14);
+  --dock-bg:rgba(21,30,39,.93); --dock-bg-solid:#151e27; --dock-line:#212c37;
+  --dock-seg:#1c2630; --dock-active:#27333f; --dock-fg:#eaf0f6; --dock-muted:#9dabba;
+  color-scheme:dark;
+}
+h2{font-size:clamp(32px,4.2vw,58px);line-height:1;letter-spacing:-.035em;
+  font-weight:800;text-transform:uppercase}
+h3{font-weight:700;letter-spacing:-.02em}
+h4{font-weight:700;letter-spacing:-.01em}
+.logo span{letter-spacing:.2em;font-weight:700}
+.badge-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.badge{background:var(--surface);padding:26px 22px;text-align:center}
+.badge b{display:block;font-family:var(--font-display);font-size:14px;font-weight:800;
+  text-transform:uppercase;letter-spacing:-.01em;margin-bottom:4px}
+.badge span{font-size:12px;color:var(--muted)}
+.card{border-top:4px solid var(--accent)}
+.steel{background:var(--ink-bg);color:var(--ink-fg);padding:44px;border-left:6px solid var(--accent)}
+.steel h3{color:var(--ink-fg)}
+.steel p{color:var(--ink-muted)}
+.finance{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line)}
+.finance div{background:var(--surface);padding:30px 26px}
+.finance b{display:block;font-family:var(--font-display);font-size:32px;font-weight:900;
+  letter-spacing:-.04em;color:var(--accent);margin-bottom:6px}
+.review{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:28px}
+.review .stars{color:var(--accent);letter-spacing:.2em;font-size:14px;margin-bottom:12px}
+.review p{font-size:14.5px;margin-bottom:16px}
+.review cite{font-style:normal;font-size:12.5px;font-weight:700;color:var(--fg)}
+.review cite span{display:block;font-weight:400;color:var(--muted);font-size:11.5px;margin-top:2px}
+@media(max-width:860px){.badge-strip,.finance{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.badge-strip,.finance{grid-template-columns:1fr}}
+
+
+/* Distinctive contractor direction: construction signage */
+.concept-tabs--contractor{background:#14202c;border:0;border-bottom:6px solid var(--accent)}
+.concept-tabs--contractor .wrap{gap:0;padding-block:0}
+.concept-tabs--contractor a{flex:1;min-height:58px;border-right:1px solid rgba(255,255,255,.14);color:#eef3f8;
+  text-transform:uppercase;letter-spacing:.07em;font-size:11px;border-radius:0}
+.concept-tabs--contractor a:first-child{background:var(--accent);color:#fff}
+.concept-tabs--contractor a:hover{background:#243443;color:#fff}
+.hero{align-items:center;--hero-pos:62% 50%}
+.hero-inner{margin-left:5%;max-width:900px}
+.hero h1{background:rgba(20,32,44,.88);border-left:9px solid var(--accent);padding:20px 24px;max-width:9ch}
+.section h2{position:relative;padding-bottom:18px}
+.section h2::after{content:'';position:absolute;left:0;bottom:0;width:76px;height:7px;background:var(--accent)}
+.card{box-shadow:8px 8px 0 var(--line)}
+@media(max-width:860px){.concept-tabs--contractor a{flex:none}.hero{--hero-mobile-pos:55% 50%}.hero h1{--h1-mobile:clamp(34px,10vw,45px)}}

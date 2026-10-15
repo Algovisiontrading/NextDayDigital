@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Demo concepts are noindex in their own <head> as well.
+Disallow: /restaurant.html
+Disallow: /landscape.html
+Disallow: /auto.html
+Disallow: /bakery.html
+Disallow: /fitness.html
+Disallow: /salon.html
+Disallow: /contractor.html
+Disallow: /professional.html
+
+Sitemap: https://nextdaydigital.digital/sitemap.xml
