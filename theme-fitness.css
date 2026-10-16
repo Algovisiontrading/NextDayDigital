@@ -1,0 +1,95 @@
+/* ===========================================================
+   NORTHPOINT STRENGTH — training facility
+   Bebas Neue display / Barlow Condensed UI. Near-black + signal red.
+   Oversized compressed type, slashed dividers, zero softness.
+   =========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap');
+
+:root{
+  --font-display:'Bebas Neue',Impact,sans-serif;
+  --font-body:'Barlow',system-ui,sans-serif;
+  --font-ui:'Barlow Condensed',sans-serif;
+  --font-quote:'Barlow Condensed',sans-serif;
+
+  --bg:#0a0b0d; --fg:#f4f5f6; --muted:#949aa3; --line:#1f2328;
+  --surface:#111317; --tint:#111317; --accent:#e23a2e; --on-accent:#fff;
+  --ink-bg:#060708; --ink-fg:#f4f5f6; --ink-muted:#a2a8b1;
+  --head-bg:rgba(10,11,13,.9);
+  --bar-bg:#e23a2e; --bar-fg:#fff; --bar-line:rgba(255,255,255,.26);
+  --hero-scrim:linear-gradient(88deg,rgba(4,5,6,.94) 2%,rgba(4,5,6,.4) 60%),
+               linear-gradient(0deg,rgba(4,5,6,.92),transparent 46%);
+  --hero-kicker:#ff6a5e;
+  --shadow-sm:0 18px 42px rgba(0,0,0,.62);
+  color-scheme:dark;
+
+  --h1:clamp(62px,9.6vw,154px); --h1-weight:400; --h1-lh:.84; --h1-tracking:0; --h1-case:uppercase;
+  --hero-p:17px; --hero-max:900px; --hero-h:94vh;
+  --logo-size:26px; --logo-weight:400; --logo-tracking:.05em;
+  --menu-size:14px; --menu-case:uppercase; --menu-tracking:.1em; --menu-weight:600; --menu-gap:26px;
+  --btn-radius:0; --btn-case:uppercase; --btn-tracking:.14em; --btn-size:13px;
+  --btn-weight:700; --btn-pad:17px 30px;
+  --card-radius:0; --img-radius:0; --card-pad:32px 28px; --card-h:28px;
+  --kicker-tracking:.3em; --kicker-size:11px; --section-pad:92px;
+  --bar-b:30px; --bar-b-weight:400;
+  --quote-size:clamp(26px,3vw,42px);
+  --faq-size:18px;
+  --dock-bg:rgba(17,19,23,.93); --dock-bg-solid:#111317; --dock-line:#1f2328;
+  --dock-seg:#181b20; --dock-active:#242931; --dock-fg:#f4f5f6; --dock-muted:#949aa3;
+}
+html[data-theme="light"]{
+  --bg:#f1f2f4; --fg:#0c0e11; --muted:#575e68; --line:#d7dadf;
+  --surface:#fff; --tint:#e6e8ec; --accent:#cf2a1e; --on-accent:#fff;
+  --ink-bg:#0c0e11; --ink-fg:#f4f5f6; --ink-muted:#a2a8b1;
+  --head-bg:rgba(241,242,244,.9); --bar-bg:#cf2a1e; --bar-line:rgba(255,255,255,.3);
+  --shadow-sm:0 16px 38px rgba(12,14,17,.15);
+  --dock-bg:rgba(255,255,255,.92); --dock-bg-solid:#fff; --dock-line:#d7dadf;
+  --dock-seg:#e6e8ec; --dock-active:#fff; --dock-fg:#0c0e11; --dock-muted:#575e68;
+  color-scheme:light;
+}
+h2{font-family:var(--font-display);font-size:clamp(44px,6vw,88px);line-height:.9;
+  text-transform:uppercase;letter-spacing:0;font-weight:400}
+h3{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.015em;font-weight:400}
+h4{font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.07em;font-weight:700;font-size:16px}
+.logo span{font-family:var(--font-ui);letter-spacing:.3em}
+.hero h1 em{font-style:normal;color:var(--accent);display:block}
+.slash{height:6px;background:repeating-linear-gradient(115deg,var(--accent) 0 16px,transparent 16px 32px)}
+.card{border-left:3px solid var(--accent)}
+.card:hover{transform:translateX(5px);border-color:var(--accent)}
+.sched{width:100%;border-collapse:collapse}
+.sched th,.sched td{padding:14px 14px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
+.sched thead th{font-family:var(--font-ui);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);font-weight:700}
+.sched tbody th{font-family:var(--font-ui);font-size:17px;font-weight:700;text-transform:uppercase;
+  color:var(--fg);width:24%}
+.sched td{color:var(--muted)}
+.sched tbody tr:hover td,.sched tbody tr:hover th{background:var(--tint)}
+.planbox{border:1px solid var(--line);background:var(--surface);padding:34px 28px;position:relative}
+.planbox.best{border:2px solid var(--accent)}
+.planbox .tagbest{position:absolute;top:0;left:0;background:var(--accent);color:#fff;
+  font-family:var(--font-ui);font-size:11px;font-weight:700;letter-spacing:.17em;
+  text-transform:uppercase;padding:6px 14px}
+.planbox .amt{font-family:var(--font-display);font-size:62px;line-height:.9;color:var(--fg);margin:14px 0 2px}
+.planbox .amt small{font-family:var(--font-ui);font-size:15px;letter-spacing:.1em;color:var(--muted)}
+.planbox ul{list-style:none;margin:22px 0 26px;padding:0}
+.planbox li{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+.coach .shot{height:300px;filter:grayscale(1) contrast(1.12);transition:filter .5s}
+.coach:hover .shot{filter:grayscale(0) contrast(1)}
+.coach h3{font-size:27px;margin:18px 0 2px}
+.coach span{font-family:var(--font-ui);font-size:12.5px;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--accent)}
+
+
+/* Distinctive gym direction: training board / scoreboard */
+.concept-tabs--fitness{background:var(--accent);border:0}
+.concept-tabs--fitness .wrap{padding-block:0;gap:0}
+.concept-tabs--fitness a{min-height:54px;flex:1;border-left:1px solid rgba(255,255,255,.25);color:#fff;
+  font-family:var(--font-ui);font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+.concept-tabs--fitness a[aria-current="page"]{background:#070809;color:#fff}
+.concept-tabs--fitness a:hover{background:#fff;color:#111}
+.hero{align-items:center;--hero-pos:64% 50%}
+.hero-inner{margin-left:5%;max-width:940px}
+.hero h1{font-size:clamp(70px,11vw,170px);max-width:8ch}
+.section>.wrap>.sec-head{border-left:8px solid var(--accent);padding-left:24px}
+.card{background:linear-gradient(135deg,var(--surface),var(--bg));transform:skewX(-1.5deg)}
+.card>*{transform:skewX(1.5deg)}
+@media(max-width:860px){.concept-tabs--fitness a{flex:none}.hero{--hero-mobile-pos:58% 50%}.hero h1{--h1-mobile:clamp(48px,15vw,68px)}}

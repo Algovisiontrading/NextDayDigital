@@ -1,0 +1,14 @@
+/* Harbor & Vine page additions — restaurant pages only. */
+.hv-sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.hv-sig{margin:0;overflow:hidden;border-radius:4px;background:#17130f;position:relative}
+.hv-sig img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s}
+.hv-sig:hover img{transform:scale(1.05);filter:brightness(.82)}
+.hv-sig figcaption{position:absolute;inset:auto 0 0 0;padding:44px 20px 18px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75));display:grid;gap:4px}
+.hv-sig figcaption b{font-size:1.15rem;font-weight:500}
+.hv-sig figcaption span{font-size:.85rem;opacity:.8}
+.hv-hours{border:1px solid rgba(255,255,255,.18);padding:30px;border-radius:4px}
+.hv-hours h3{margin-top:0}
+.request-preview{white-space:pre-wrap;padding:18px;margin-top:18px;border:1px dashed rgba(127,127,127,.4);border-radius:4px;font-size:.9rem}
+@media(max-width:860px){.hv-sig-grid{grid-template-columns:1fr 1fr}.hv-sig:last-child{grid-column:1/-1}.hv-sig:last-child img{aspect-ratio:16/9}}
+@media(max-width:560px){.hv-sig-grid{grid-template-columns:1fr}.hv-sig img{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){.hv-sig img{transition:none}.hv-sig:hover img{transform:none}}

@@ -1,0 +1,28 @@
+MERGED SITE AUDIT
+
+COMPLETED
+Permanent source-level team branding, comparison labels, and both founders in structured data.
+Homepage two-brother introduction and stronger hero typography.
+Restaurant return links, skip links, current-page indicators, and agency CTAs corrected.
+Unified restaurant home/menu CSV source; menu/wine timeout, refresh, validation, and honest failure states.
+Menu grouping uses a null-prototype map to handle arbitrary category names safely.
+Agency email preview/copy fallback, accurate delivery status, session-only drafts, clear-draft control.
+Reservation demo no longer emails a fictional address; past-date validation and request preview added.
+Mobile navigation overflow, tablet breakpoint, focus handling, active-section tabs, no-JavaScript visibility.
+Reconstructed missing theme-fx.css with dark cursor shadow only.
+Part 2 video, wine, animation, and responsive improvements retained from the verified prior ZIP.
+Removed repeated interior images presented as staff portraits.
+
+AUTOMATED CHECKS
+External JavaScript and inline executable scripts: Node syntax checks.
+HTML: duplicate IDs, local code/page references, internal fragment targets.
+Visible HTML: no solo Anthony references and no one-person wording.
+Homepage JSON-LD: parsed, both founders present.
+Menu and wine parser regression tests: quoted fields, availability, invalid headers, prices, escaping.
+CSS and nested media: parser checks.
+ZIP: CRC/integrity and packaged dependencies.
+
+NOT VERIFIED
+No browser engine is installed. Visual rendering, iPhone playback, live sheet requests, email-app behavior, and hosting were not tested. Images and MP4s were not uploaded and are not included. Keep existing media.
+
+See README.md for remaining form/booking integration, deployment-specific 404 handling, canonical-domain confirmation, and media requirements.

@@ -1,0 +1,69 @@
+/* Harbor & Vine fork cursor — loaded ONLY by the restaurant-*.html pages. */
+
+/* 1) Fallback: static fork cursor (works even if JS is off). */
+html.hv-fork:not(.hv-fork-live):not(#hv),
+html.hv-fork:not(.hv-fork-live):not(#hv) body,
+html.hv-fork:not(.hv-fork-live):not(#hv) a,
+html.hv-fork:not(.hv-fork-live):not(#hv) button,
+html.hv-fork:not(.hv-fork-live):not(#hv) select,
+html.hv-fork:not(.hv-fork-live):not(#hv) summary,
+html.hv-fork:not(.hv-fork-live):not(#hv) label,
+html.hv-fork:not(.hv-fork-live):not(#hv) [role="button"]{
+  cursor:url("fork-cursor-32.png") 3 3, auto !important;
+}
+html.hv-fork:not(.hv-fork-live):not(#hv) input:not([type="checkbox"]):not([type="radio"]):not([type="date"]),
+html.hv-fork:not(.hv-fork-live):not(#hv) textarea{cursor:text !important}
+
+/* 2) Animated fork (mouse/trackpad only, added by restaurant-cursor.js). */
+html.hv-fork-live:not(#hv),
+html.hv-fork-live:not(#hv):not(#hv2),
+html.hv-fork-live:not(#hv):not(#hv2) *,
+html.hv-fork-live:not(#hv):not(#hv2) *::before,
+html.hv-fork-live:not(#hv):not(#hv2) *::after{cursor:none !important}
+html.hv-fork-live:not(#hv):not(#hv2):not(#hv3) input:not([type="checkbox"]):not([type="radio"]):not([type="date"]),
+html.hv-fork-live:not(#hv):not(#hv2):not(#hv3) textarea{cursor:text !important}
+
+.hv-fork-cursor{
+  position:fixed;left:0;top:0;z-index:2147483647;
+  width:31px;height:36px;
+  pointer-events:none;
+  opacity:0;
+  will-change:transform;
+  transition:opacity .15s ease;
+}
+.hv-fork-cursor.is-visible{opacity:1}
+.hv-fork-cursor.is-hidden{opacity:0}
+.hv-fork-cursor img{
+  display:block;width:100%;height:100%;
+  transform-origin:3px 3px;           /* pivot on the tine tips */
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.35));
+  transition:transform .18s cubic-bezier(.2,.8,.3,1.4);
+}
+.hv-fork-cursor.is-hover img{transform:rotate(-8deg) scale(1.08)}
+.hv-fork-cursor.is-down img{transform:rotate(14deg) scale(.86);transition-duration:.08s}
+
+/* Little "plate tap" ring where you click */
+.hv-fork-tap{
+  position:fixed;left:0;top:0;z-index:2147483646;
+  width:26px;height:26px;margin:-13px 0 0 -13px;
+  border:1.5px solid rgba(201,162,92,.85);
+  border-radius:50%;
+  pointer-events:none;
+  animation:hvForkTap .45s ease-out forwards;
+}
+@keyframes hvForkTap{
+  from{transform:translate(var(--x),var(--y)) scale(.3);opacity:1}
+  to{transform:translate(var(--x),var(--y)) scale(1.5);opacity:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hv-fork-cursor img{transition:none}
+  .hv-fork-tap{display:none}
+}
+
+/* Hide any cursor-follower injected by the shared theme scripts (old fork, ring, glow). */
+html.hv-fork-live body > [class*="cursor" i]:not(.hv-fork-cursor),
+html.hv-fork-live body > [id*="cursor" i],
+html.hv-fork-live .hv-old-cursor{
+  display:none !important;visibility:hidden !important;opacity:0 !important;
+}

@@ -1,0 +1,81 @@
+/* ===========================================================
+   FIELD & FORM — landscape architecture
+   Libre Baskerville display / Inter UI. Sage, stone, bark.
+   Organic: oversized radii, soft shadows, lots of breathing room.
+   =========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --font-display:'Libre Baskerville',Georgia,serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-ui:'Inter',sans-serif;
+  --font-quote:'Libre Baskerville',Georgia,serif;
+
+  --bg:#f6f5ef; --fg:#1f2a21; --muted:#5f6d60; --line:#dde0d4;
+  --surface:#fffefa; --tint:#eaeee1; --accent:#5b7d4b; --on-accent:#fffefa;
+  --ink-bg:#1d2b20; --ink-fg:#f2f5ec; --ink-muted:#c2d0bd;
+  --head-bg:rgba(246,245,239,.85);
+  --bar-bg:#eaeee1; --bar-fg:#1f2a21; --bar-line:#d5dbc8;
+  --hero-scrim:linear-gradient(80deg,rgba(20,32,22,.86) 6%,rgba(20,32,22,.28) 66%),
+               linear-gradient(0deg,rgba(20,32,22,.72),transparent 54%);
+  --hero-kicker:#bcd99f;
+  --shadow-sm:0 20px 48px rgba(31,42,33,.13);
+
+  --h1:clamp(44px,5.6vw,80px); --h1-weight:400; --h1-lh:1.08; --h1-tracking:-.02em;
+  --hero-p:18.5px; --hero-max:760px; --hero-h:86vh;
+  --logo-weight:700; --logo-size:21px; --logo-tracking:-.01em;
+  --menu-size:14px; --menu-weight:500; --menu-gap:30px;
+  --btn-radius:999px; --btn-pad:15px 28px; --btn-size:13.5px; --btn-weight:600; --btn-tracking:.01em;
+  --card-radius:26px; --img-radius:26px; --card-pad:34px; --card-h:22px;
+  --kicker-tracking:.18em; --section-pad:100px; --lede-size:18px;
+  --quote-size:clamp(23px,2.6vw,34px);
+  --dock-bg:rgba(255,254,250,.9); --dock-bg-solid:#fffefa; --dock-line:#dde0d4;
+  --dock-seg:#eaeee1; --dock-active:#fffefa; --dock-fg:#1f2a21; --dock-muted:#5f6d60;
+}
+html[data-theme="dark"]{
+  --bg:#121711; --fg:#eef3e9; --muted:#9db09b; --line:#262f24;
+  --surface:#192018; --tint:#192018; --accent:#8fb678; --on-accent:#121711;
+  --ink-bg:#0d130c; --ink-fg:#eef3e9; --ink-muted:#b7c7b2;
+  --head-bg:rgba(18,23,17,.86); --bar-bg:#192018; --bar-fg:#eef3e9; --bar-line:#262f24;
+  --dock-bg:rgba(25,32,24,.92); --dock-bg-solid:#192018; --dock-line:#262f24;
+  --dock-seg:#222b20; --dock-active:#2d3a2a; --dock-fg:#eef3e9; --dock-muted:#9db09b;
+  color-scheme:dark;
+}
+h2{font-size:clamp(32px,3.9vw,54px);line-height:1.12;letter-spacing:-.02em}
+h3{font-size:21px;letter-spacing:-.01em}
+.shot{border-radius:26px}
+.mosaic .shot:first-child{border-radius:34px 34px 120px 34px}
+.mosaic .shot:nth-child(2){border-radius:120px 34px 34px 34px}
+.hero>img{filter:saturate(1.04)}
+.leaf{border-radius:999px 999px 999px 24px}
+.plan{border:1px solid var(--line);border-radius:26px;padding:32px;background:var(--surface)}
+.plan .tier{font-family:var(--font-ui);font-size:11px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
+.plan ul{margin:0;padding:0;list-style:none}
+.plan li{position:relative;padding:9px 0 9px 26px;font-size:14px;color:var(--muted);
+  border-bottom:1px dashed var(--line)}
+.plan li:last-child{border-bottom:0}
+.plan li::before{content:"";position:absolute;left:0;top:16px;width:11px;height:11px;
+  border-radius:999px 999px 999px 2px;background:var(--accent);opacity:.55}
+.timeline{display:grid;gap:0}
+.timeline li{list-style:none;display:grid;grid-template-columns:86px 1fr;gap:26px;
+  padding:26px 0;border-top:1px solid var(--line)}
+.timeline b{font-family:var(--font-display);font-size:30px;color:var(--accent);line-height:1}
+.timeline h4{font-size:19px;margin-bottom:6px}
+.timeline p{font-size:14.5px;margin:0}
+@media(max-width:620px){.timeline li{grid-template-columns:1fr;gap:8px}}
+
+
+/* Distinctive landscape direction: organic field notes */
+.concept-tabs--landscape{background:var(--tint);border:0;padding-block:8px}
+.concept-tabs--landscape .wrap{gap:12px}
+.concept-tabs--landscape a{border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted);padding-inline:18px}
+.concept-tabs--landscape a[aria-current="page"]{border-color:var(--accent);box-shadow:inset 0 0 0 3px var(--surface)}
+.concept-tabs--landscape a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.hero{border-radius:0 0 72px 0;--hero-pos:58% 50%}
+.hero-inner{margin-left:5%;max-width:720px}
+.section.tint{border-radius:72px 0 72px 0;margin-inline:2%;overflow:hidden}
+.card:nth-child(2){transform:translateY(28px)}
+.card:nth-child(2):hover{transform:translateY(20px)}
+.timeline li b{width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:var(--tint)}
+@media(max-width:860px){.hero{border-radius:0 0 38px 0;--hero-mobile-pos:55% 50%}.section.tint{margin-inline:0;border-radius:38px 0}.card:nth-child(2){transform:none}}

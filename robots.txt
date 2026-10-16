@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# Demo pages retain their own noindex,follow meta tags.
+Sitemap: https://nextdaydigital.digital/sitemap.xml
